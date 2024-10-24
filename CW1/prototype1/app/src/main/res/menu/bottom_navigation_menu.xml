@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/status"
+        android:title="Holiday Status"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_status"
+        />
+    <item android:id="@+id/details"
+        android:title="View details"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_details"/>
+    <item android:id="@+id/settings"
+        android:title="settings"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_settings"/>
+</menu>
