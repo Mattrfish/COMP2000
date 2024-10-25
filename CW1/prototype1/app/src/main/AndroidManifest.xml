@@ -31,5 +31,14 @@
             android:exported="true"
             android:theme="@style/Theme.Prototype1">
         </activity>
-    </application>
+        <activity android:name=".DetailsActivity">
+        </activity>
+        <activity android:name=".SettingsActivity" >
+        </activity>
+        <activity android:name=".RequestActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Prototype1">
+        </activity>
+
+</application>
 </manifest>
