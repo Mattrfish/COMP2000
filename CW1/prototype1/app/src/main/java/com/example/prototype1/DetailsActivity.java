@@ -18,60 +18,57 @@ public class DetailsActivity extends AppCompatActivity {
 
         Button editButton = findViewById(R.id.edit_button); // gets the button
 
-// List of all EditText fields to toggle
+// List of data to edit. stored in an array for better efficiency
         int[] editableTextIds = {
                 R.id.Title_data, R.id.Fn_data, R.id.Sn_data, R.id.Pass_data,
                 R.id.Dob_data, R.id.Address_data, R.id.Mn_data, R.id.Jr_data
         };
 
-// Fields to set as permanently non-editable
+// list of data in array that can not be changed
         int[] nonEditableTextIds = {
                 R.id.id_data, R.id.Email_data, R.id.Salary_data
         };
 
-// Set permanently non-editable fields
+// Set the non-editable data as permanantly non-editable
         for (int id : nonEditableTextIds) {
             EditText editText = findViewById(id);
-            editText.setFocusable(false);
+            editText.setFocusable(false); //cannot edit
             editText.setFocusableInTouchMode(false);
         }
 
-// Initially set editable fields as non-editable
+// Initially set the editable data as non-editable
         for (int id : editableTextIds) {
             EditText editText = findViewById(id);
             editText.setFocusable(false);
             editText.setFocusableInTouchMode(false);
         }
 
-// Toggle button to switch between Edit and Save modes
+// button to switch between Edit and Save modes
         editButton.setOnClickListener(new View.OnClickListener() {
-            private boolean isEditMode = false;
+            private boolean isEditMode = false; //initially set to only view
 
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //when edit button clicked...
                 if (!isEditMode) {
                     // Entering Edit mode
-                    for (int id : editableTextIds) {
+                    for (int id : editableTextIds) { //loop through the array to update data to edit mode
                         EditText editText = findViewById(id);
-                        editText.setFocusable(true);
+                        editText.setFocusable(true); //edit enabled
                         editText.setFocusableInTouchMode(true);
                     }
                     editButton.setText("Save"); // Change button text to "Save"
                     isEditMode = true; // Update mode
 
                 } else {
-                    // Save mode: Save the details here if needed
-                    for (int id : editableTextIds) {
+                    // enter save mode
+                    for (int id : editableTextIds) { //loop through array to turn it back to view only
                         EditText editText = findViewById(id);
-                        editText.setFocusable(false);
+                        editText.setFocusable(false);  //edit disabled
                         editText.setFocusableInTouchMode(false);
 
-                        // Optional: Retrieve the text from editText for saving
-                        String text = editText.getText().toString();
-                        // Code to save 'text' goes here
                     }
-                    editButton.setText("Edit"); // Change button text back to "Edit"
-                    isEditMode = false; // Update mode
+                    editButton.setText("Edit"); // Change button text back to Edit
+                    isEditMode = false; // Update edit mode back to view
                 }
             }
         });
@@ -79,7 +76,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 
 
-        // Initialize the BottomNavigationView
+        // Initialize the Bottom menu
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation); //nav bar
         bottomNavigationView.setSelectedItemId(R.id.details);
 

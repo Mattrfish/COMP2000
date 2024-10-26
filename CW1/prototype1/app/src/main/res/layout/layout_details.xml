@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsActivity">
-
+    <!-- allow scroll ability -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+            <!-- main title -->
             <TextView
                 android:id="@+id/details_title"
                 android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
                 android:text="Personal Details"
                 android:textSize="38sp"
                 android:textStyle="bold"/>
-
+            <!-- edit details button -->
             <Button
                 android:id="@+id/edit_button"
                 android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:text="Edit details"
                 android:textSize="24dp"
                 app:cardCornerRadius="10dp" />
-
+            <!-- id box to contain title, and text-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/id_box"
                 android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                     android:text="Test"
                     android:textSize="20dp" />
             </androidx.cardview.widget.CardView>
-
+            <!-- email box to contain title and text -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Email_box"
                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- title box to contain, title and text -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Title_box"
                 android:layout_width="150dp"
@@ -138,7 +138,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- name box to contaim tilte and text -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Fn_box"
                 android:layout_width="match_parent"
@@ -171,7 +171,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- surname box to contain, title and text-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Sn_box"
                 android:layout_width="match_parent"
@@ -204,7 +204,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- password box to contain title and text -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Pass_box"
                 android:layout_width="match_parent"
@@ -237,7 +237,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- date of birth box to contain tilte and text-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Dob_box"
                 android:layout_width="match_parent"
@@ -270,7 +270,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- address box to contain, title and text  -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Address_box"
                 android:layout_width="match_parent"
@@ -303,7 +303,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- phone number box to contain title and text -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Mn_box"
                 android:layout_width="match_parent"
@@ -336,7 +336,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- job role box to contain title and text -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Jr_box"
                 android:layout_width="match_parent"
@@ -369,7 +369,7 @@
                     android:textSize="20dp" />
 
             </androidx.cardview.widget.CardView>
-
+            <!-- salary box to contain title and text -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/Salary_box"
                 android:layout_width="match_parent"
@@ -403,7 +403,7 @@
 
 
             </androidx.cardview.widget.CardView>
-
+            <!-- space at the bottom so last box isnt below menu bar -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/space1"
                 android:layout_width="match_parent"
@@ -416,7 +416,7 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
+    <!-- menu bar at bottom -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="wrap_content"

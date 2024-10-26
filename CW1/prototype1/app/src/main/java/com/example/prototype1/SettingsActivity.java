@@ -23,7 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.settings);
 
-        // Load popup when clicked
+        // logout button
         Button logoutButton = findViewById(R.id.logout_button);
         logoutButton.setOnClickListener(new View.OnClickListener() {
 
@@ -36,17 +36,17 @@ public class SettingsActivity extends AppCompatActivity {
                 // Create the popup window
                 int width = LinearLayout.LayoutParams.MATCH_PARENT;
                 int height = LinearLayout.LayoutParams.MATCH_PARENT;
-                boolean focusable = true; // Lets taps outside the popup also dismiss it
+                boolean focusable = true;
                 final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
                 // Show the popup window
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-                // Find the Yes and No buttons in the popup view
+                // Find the Yes and No buttons in the popup
                 Button yesButton = popupView.findViewById(R.id.yes_button);
                 Button noButton = popupView.findViewById(R.id.no_button);
 
-                // Set click listener for "No" button to dismiss the popup
+                // No button to dismiss the popup
                 noButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -54,35 +54,35 @@ public class SettingsActivity extends AppCompatActivity {
                     }
                 });
 
-                // Set click listener for "Yes" button to go back to the login page
+                // Yes button to go back to login page
                 yesButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         popupWindow.dismiss(); // Dismiss the popup
 
-                        // Navigate to the login activity
+                        // go to login page
                         Intent intent = new Intent(SettingsActivity.this, ActivityMain.class);
                         startActivity(intent);
-                        finish(); // Finish current activity
+                        finish();
                     }
                 });
             }
         });
 
-        // Set up BottomNavigationView item selection listener
+        // Set up Bottom menu
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.status) {
+            if (id == R.id.status) { //when status clicked...
                 Intent intent = new Intent(SettingsActivity.this, ActivityStatus.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0);
+                overridePendingTransition(0, 0); //smoother transition
                 finish();
                 return true;
 
-            } else if (id == R.id.details) {
+            } else if (id == R.id.details) { //when details clicked...
                 Intent intent = new Intent(SettingsActivity.this, DetailsActivity.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0);
+                overridePendingTransition(0, 0); //smoother transition
                 finish();
                 return true;
             }

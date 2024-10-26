@@ -17,7 +17,7 @@
         android:layout_marginTop="250dp"
         android:layout_marginBottom="450dp">
 
-
+        <!-- popup text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             android:textColor="@color/black"
             android:textSize="22sp"
             />
-
+        <!-- yes button -->
         <Button
             android:id="@+id/yes_button"
             android:layout_width="125dp"
@@ -37,7 +37,7 @@
             android:layout_marginLeft="20dp"
             android:text="Yes"
             android:elevation="3dp"/>
-
+        <!-- no button -->
         <Button
             android:id="@+id/no_button"
             android:layout_width="125dp"

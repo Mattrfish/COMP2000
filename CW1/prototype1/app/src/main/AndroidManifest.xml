@@ -44,6 +44,10 @@
             android:exported="true"
             android:theme="@style/Theme.Prototype1">
         </activity>
+        <activity android:name=".ActivityCreateAccount"
+            android:exported="true"
+            android:theme="@style/Theme.Prototype1">
+        </activity>
 
 </application>
 </manifest>
