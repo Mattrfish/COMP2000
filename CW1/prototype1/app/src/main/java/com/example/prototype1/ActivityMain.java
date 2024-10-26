@@ -14,14 +14,14 @@ public class ActivityMain extends AppCompatActivity {
         setContentView(R.layout.layout);
 
         // Handle login button click
-        Button loginButton = findViewById(R.id.login_button);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        Button loginButton = findViewById(R.id.login_button); //gets button
+        loginButton.setOnClickListener(new View.OnClickListener() { //sets it to click
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //when clicked..
                 // Navigate to the status page
                 Intent intent = new Intent(ActivityMain.this, ActivityStatus.class);
-                startActivity(intent);
-                overridePendingTransition(0, 0);
+                startActivity(intent); //starts activity
+                overridePendingTransition(0, 0); //smoother transition
                 finish();
 
             }
